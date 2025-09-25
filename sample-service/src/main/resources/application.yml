@@ -4,12 +4,14 @@ spring:
   application:
     name: sample-service
   profiles:
-    active: prod
+    active: dev
 #  cloud:
 #    config:
 #      uri: http://localhost:8888
 #      enabled: false
 
-#custom:
-#  secret: tajne
-#  nonsecret: nietajne
+
+
+custom:
+  secret: tajne local
+  nonsecret: nietajne local
