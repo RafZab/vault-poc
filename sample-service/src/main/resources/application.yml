@@ -7,6 +7,10 @@ spring:
     active: dev
 #  cloud:
 #    config:
+#      headers:
+#        X-Config-Token: "myroot"
+#  cloud:
+#    config:
 #      uri: http://localhost:8888
 #      enabled: false
 
