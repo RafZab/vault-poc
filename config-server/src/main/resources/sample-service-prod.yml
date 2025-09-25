@@ -1,0 +1,8 @@
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+custom:
+  nonsecret: "Wartość prod nie-poufna"
+#  secret: "prod my-secret"

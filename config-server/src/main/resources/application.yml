@@ -1,0 +1,32 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+
+  profiles:
+    active: native
+
+
+#  profiles:
+#    active: vault
+  cloud:
+    vault:
+      host: localhost
+      port: 8200
+      scheme: http
+      authentication: TOKEN
+      token: myroot
+#    config:
+#      server:
+#        vault:
+#          host: localhost
+#          port: 8200
+#          scheme: http
+#          backend: secret
+#          defaultKey: application
+#          profileSeparator: ','
+#          kvVersion: 1
+#          authentication: TOKEN
+#          token: myroot
