@@ -12,8 +12,10 @@ spring:
       host: localhost
       port: 8200
       scheme: http
-      authentication: TOKEN
-      token: myroot
+      authentication: APPROLE
+      app-role:
+        role-id: ${VAULT_APPROLE_ROLE_ID:8ba259ae-f835-e535-2839-c202e16b44ea}
+        secret-id: ${VAULT_APPROLE_SECRET_ID:0e336373-4072-5aed-0f4c-3a11cb1702d1}
     config:
       server:
         failOnCompositeError: true # true - all config have to be success
@@ -28,10 +30,12 @@ spring:
             port: 8200
             scheme: http
             backend: secret
-            kvVersion: 2
-            authentication: TOKEN
-            token: myroot
             profileSeparator: '-' # default ,
+            kvVersion: 2
+            authentication: APPROLE
+            app-role:
+              role-id: ${VAULT_APPROLE_ROLE_ID:8ba259ae-f835-e535-2839-c202e16b44ea}
+              secret-id: ${VAULT_APPROLE_SECRET_ID:0e336373-4072-5aed-0f4c-3a11cb1702d1}
 
 
 ######## Only native ########
