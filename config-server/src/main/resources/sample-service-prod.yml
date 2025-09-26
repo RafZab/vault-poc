@@ -5,4 +5,4 @@ spring:
 
 custom:
   nonsecret: "Wartość prod nie-poufna"
-#  secret: "prod my-secret"
+  secret: ${DB_PASS}

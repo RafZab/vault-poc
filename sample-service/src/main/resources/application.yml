@@ -4,7 +4,7 @@ spring:
   application:
     name: sample-service
   profiles:
-    active: dev
+    active: prod
 #  cloud:
 #    config:
 #      headers:
