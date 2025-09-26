@@ -1,34 +1,35 @@
 server:
   port: 8888
 
-#spring:
-#  application:
-#    name: config-server
-#  profiles:
-#    active: composite
-#  cloud:
-#    vault:
-#      host: localhost
-#      port: 8200
-#      scheme: http
-#      authentication: TOKEN
-#      token: myroot
-#    config:
-#      server:
-#        failOnCompositeError: false
-#        composite:
-#          - type: native
-#            order: 1
-#          - type: vault
-#            order: 2
-#            host: localhost
-#            port: 8200
-#            scheme: http
-#            backend: secret
-#            defaultKey: application
-#            kvVersion: 1
-#            authentication: TOKEN
-#            token: myroot
+######## Mixed native and vault  ########
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: composite
+  cloud:
+    vault:
+      host: localhost
+      port: 8200
+      scheme: http
+      authentication: TOKEN
+      token: myroot
+    config:
+      server:
+        failOnCompositeError: false
+        composite:
+          - type: native
+            order: 1
+          - type: vault
+            order: 2
+            host: localhost
+            port: 8200
+            scheme: http
+            backend: secret
+            kvVersion: 2
+            authentication: TOKEN
+            token: myroot
+            profileSeparator: '-' # default ,
 
 
 ######## Only native ########
