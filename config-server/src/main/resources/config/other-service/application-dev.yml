@@ -5,4 +5,4 @@ spring:
 
 custom:
   nonsecret: "Wartość dev nie-poufna"
-  secret: ${DB_PASS:}
+  secret: ${DB_PASS}

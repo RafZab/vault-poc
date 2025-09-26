@@ -16,10 +16,12 @@ spring:
       token: myroot
     config:
       server:
-        failOnCompositeError: false # true - all config have to be success
+        failOnCompositeError: true # true - all config have to be success
         composite:
           - type: native
             order: 1
+            search-locations:
+              - classpath:/config/{application}
           - type: vault
             order: 2
             host: localhost
